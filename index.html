@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ahorcado</title>
+	<!-- estilos simples asignados al juego -->
+	<style>
+		body {
+			background: black;
+			color: white;
+			text-align: center;
+		}
+
+		canvas {
+			border-radius: 3em;
+		}
+	</style>
+	<!-- llamada a archivo js para la logica del juego -->
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+	<p>
+		Elige una letra:
+		<input type="text" id="letra" maxlength="1" />
+		<input type="button" id="boton" value="Boom!!" />
+		<!-- boton oculto para el reinicio del juego -->
+		<input type="button" id="refresh" value="Jugar de nuevo!" style="display:none;">
+	</p>
+	<h2 id="pista">_ _ _</h2>
+	<!-- lienzo del canvas para el juego -->
+	<canvas id="lienzo"></canvas>
+	<!-- script de llamada al metodo iniciar, para hacer funcionar la logica del juego una vez cargado la pagina-->
+	<script type="text/javascript">
+		iniciar();
+	</script>
+</body>
+</html>
